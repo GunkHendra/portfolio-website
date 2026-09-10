@@ -47,6 +47,8 @@
   --radius-3xl: calc(var(--radius) * 2.2);
   --radius-4xl: calc(var(--radius) * 2.6);
   --animate-text-up-and-down: text-up-and-down 15s linear infinite;
+  --animate-section-transition-left: section-transition-left 2s ease-in-out forwards;
+  --animate-section-transition-right: section-transition-right 2s ease-in-out forwards;
   
   @keyframes text-up-and-down {
     0%, 10%, 80%, 100% {
@@ -144,10 +146,4 @@
 
 html {
   scroll-behavior: smooth;
-}
-
-
-
-@keyframes section-transition {
-  
 }

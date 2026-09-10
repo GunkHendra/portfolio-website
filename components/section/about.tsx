@@ -1,14 +1,29 @@
-'use client'
-import { image_path } from "@/constants/image"
-import Image from "next/image"
-import { motion } from "framer-motion"
+"use client";
+import { image_path } from "@/constants/image";
+import { motion } from "framer-motion";
 
-export default function About({ isInsideContainer, mousePos, maskSize, setIsHovered }: { isInsideContainer: boolean, mousePos: { x: number, y: number }, maskSize: number, setIsHovered: (hovered: boolean) => void }) {
+export default function About({
+  isInsideContainer,
+  mousePos,
+  maskSize,
+  setIsHovered,
+  className,
+}: {
+  isInsideContainer: boolean;
+  mousePos: { x: number; y: number };
+  maskSize: number;
+  setIsHovered: (hovered: boolean) => void;
+  className?: string;
+}) {
   return (
-    <div className="relative w-full h-full" id="about">
+    <div className={`relative w-full h-full ${className}`} id="about">
       <div className="flex flex-col w-full h-full justify-center items-center px-32">
         <h3 className="w-4/5 text-[3rem] text-justify">
-          The name is Krishna, but most people call me Gung Hendra, you can call me either way. As of now, I'm a university student at Udayana University, majoring in Information Technology. I do a little competitive programming, mostly because of the fun of it, and I enjoy building full-stack applications.
+          The name is Krishna, but most people call me Gung Hendra, you can call
+          me either way. As of now, I'm a university student at Udayana
+          University, majoring in Information Technology. I do a little
+          competitive programming, mostly because of the fun of it, and I enjoy
+          building full-stack applications.
         </h3>
       </div>
 
@@ -19,8 +34,8 @@ export default function About({ isInsideContainer, mousePos, maskSize, setIsHove
           maskImage: `url(${image_path.mouse_mask})`,
           WebkitMaskImage: `url(${image_path.mouse_mask})`,
           background: `var(--color-accent)`,
-          maskRepeat: 'no-repeat',
-          WebkitMaskRepeat: 'no-repeat',
+          maskRepeat: "no-repeat",
+          WebkitMaskRepeat: "no-repeat",
           maskPosition: `0% 0%`,
           WebkitMaskPosition: `0% 0%`,
           maskSize: `40px`,
@@ -35,12 +50,15 @@ export default function About({ isInsideContainer, mousePos, maskSize, setIsHove
         }}
         transition={{
           type: "tween",
-          ease: "backOut"
+          ease: "backOut",
         }}
       >
         <div className="flex flex-col w-full h-full justify-center items-center px-32">
           <h3 className="w-4/5 text-[3rem] text-justify">
-            Do I use AI when building things? Well yes, of course I do. But I follow one principle that I got from a random YouTube video (it was a seminar), and that principle is "Never outsource the thinking.". Well, I encourage you to do the same, trust me, it goes a long way.
+            Do I use AI when building things? Well yes, of course I do. But I
+            follow one principle that I got from a random YouTube video (it was
+            a seminar), and that principle is "Never outsource the thinking.".
+            Well, I encourage you to do the same, trust me, it goes a long way.
           </h3>
         </div>
       </motion.div>
@@ -54,5 +72,5 @@ export default function About({ isInsideContainer, mousePos, maskSize, setIsHove
         />
       </div>
     </div>
-  )
+  );
 }
