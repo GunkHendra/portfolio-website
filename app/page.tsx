@@ -88,7 +88,7 @@ export default function Home() {
           handleUpdateActiveSection={updateActiveSection}
         />
       </header>
-      <main className="flex flex-1 flex-col justify-center items-center">
+      <main className="flex flex-1 flex-col justify-center items-center w-full overflow-hidden">
         <div
           className="flex w-full min-h-screen justify-center items-center px-32"
           id="hero"

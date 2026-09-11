@@ -16,7 +16,7 @@ export default function About({
   className?: string;
 }) {
   return (
-    <div className={`relative w-full h-full ${className}`} id="about">
+    <div className={`relative w-full h-full ${className}`}>
       <div className="flex flex-col w-full h-full justify-center items-center px-32">
         <h3 className="w-4/5 text-[3rem] text-justify">
           The name is Krishna, but most people call me Gung Hendra, you can call
@@ -55,18 +55,18 @@ export default function About({
       >
         <div className="flex flex-col w-full h-full justify-center items-center px-32">
           <h3 className="w-4/5 text-[3rem] text-justify">
-            Do I use AI when building things? Well yes, of course I do. But I
-            follow one principle that I got from a random YouTube video (it was
-            a seminar), and that principle is "Never outsource the thinking.".
+            Do I use AI when building things? Well yes, of course. But I
+            follow one principle that i got from Dex Horthy from HumanLayer at
+            AI Engineer Code Summit 2025, which is "Do not outsource the thinking.".
             Well, I encourage you to do the same, trust me, it goes a long way.
           </h3>
         </div>
       </motion.div>
 
-      <div className="absolute inset-0 z-50">
+      <div className="absolute inset-0 z-50 pointer-events-none">
         {/* Hover zone*/}
         <div
-          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-4/6 h-1/2 cursor-default"
+          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-5/7 h-1/2 cursor-default pointer-events-auto"
           onMouseEnter={() => setIsHovered(true)}
           onMouseLeave={() => setIsHovered(false)}
         />
