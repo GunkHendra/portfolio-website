@@ -13,7 +13,7 @@ const NavbarOption = [
     },
     {
         id: "project",
-        title: "Projects",
+        title: "Project",
         link: "#project",
         idx: 3,
     },
